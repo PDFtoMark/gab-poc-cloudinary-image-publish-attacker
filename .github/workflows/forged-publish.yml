@@ -1,0 +1,10 @@
+name: Publish
+on:
+  pull_request:
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "forged upstream workflow run from fork PR"
+          echo "$GITHUB_EVENT_NAME $GITHUB_REF"
